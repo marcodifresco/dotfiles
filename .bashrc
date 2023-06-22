@@ -26,6 +26,7 @@ export SSH_ENV="$HOME/.ssh/environment"
 export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
+export VISUAL="vim"
 
 
 
@@ -126,5 +127,7 @@ keychain ~/.ssh/id_rsa
 export PATH="/usr/lib/ccache/bin${PATH:+:}${PATH}"
 export CCACHE_DIR="/tmp/ccache"
 
+
+. ~/.fancy-git/prompt.sh
 
 . ~/.fancy-git/prompt.sh

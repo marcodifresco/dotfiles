@@ -1,3 +1,7 @@
+" From app-vim/gentoo-syntax-10
+filetype plugin on
+filetype indent on
+
 " GENERAL SETTINGS
 set number		" Show line numbers
 set laststatus=2	" Always display the status line in all windows
