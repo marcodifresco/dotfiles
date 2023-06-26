@@ -83,6 +83,8 @@ alias wget='wget -c'
 alias df='df -H'
 alias du='du -ch'
 
+# Use tmux instead of screen
+alias screen='tmux'
 
 ## OTHER SETTINGS ##
 # Sudo bash completion
