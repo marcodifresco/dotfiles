@@ -27,7 +27,8 @@ export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export VISUAL="vim"
-
+export PATH="/usr/lib/ccache/bin${PATH:+:}${PATH}"
+export CCACHE_DIR="/tmp/ccache"
 
 
 # Ccache
@@ -126,10 +127,5 @@ keychain ~/.ssh/id_rsa
 # Start pfetch
 /usr/bin/pfetch
 
-export PATH="/usr/lib/ccache/bin${PATH:+:}${PATH}"
-export CCACHE_DIR="/tmp/ccache"
-
-
-. ~/.fancy-git/prompt.sh
-
+# Start Fancy Git Prompt
 . ~/.fancy-git/prompt.sh
