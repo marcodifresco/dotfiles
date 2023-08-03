@@ -29,7 +29,7 @@ export VISUAL="vim"
 
 # Sway
 export WLR_NO_HARDWARE_CURSORS=1
-#export WLR_RENDERER=vulkan
+export WLR_RENDERER=vulkan
 export XDG_SESSION_TYPE=wayland
 export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
@@ -82,7 +82,7 @@ alias fastping='ping -c 100 -s.2'
 # do not delete / or prompt if deleting more than 3 files at a time #
 alias rm='rm -I --preserve-root'
 
-# Preventing changing permissions on / 
+# Preventing changing permissions on /
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
@@ -141,6 +141,6 @@ keychain ~/.ssh/id_rsa
 . ~/.fancy-git/prompt.sh
 
 # Start Sway
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    dbus-run-session sway --unsupported-gpu
-fi
+#if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#    dbus-run-session sway --unsupported-gpu
+#fi

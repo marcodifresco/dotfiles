@@ -1,12 +1,12 @@
 {
 	"name": "MainBar",
 	"height": 48,
-	"spacing": 8,
+	"spacing": 16,
 	"layer": "top",
 	"output": "DP-1",
 	"modules-left": ["sway/workspaces"],
 	"modules-center": ["sway/window"],
-	"modules-righit": ["tray", "wireplumber", "clock"],
+	"modules-right": ["tray", "wireplumber", "clock"],
 	"clock": {
 		"format": "{:%a, %d. %b  %H:%M}"
 	},
