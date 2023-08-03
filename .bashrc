@@ -17,9 +17,8 @@ fi
 
 ## SHELL VARIABLES ##
 export PATH=/usr/local/bin:/archive/scripts/:$PATH
-export DISPLAY=':0'
+#export DISPLAY=':0'
 export EDITOR=vim
-#export CCACHE_DIR="$HOME/.cache/ccache"
 export CCACHE_DIR="~/.cache/ccache"
 export SUDO_ASKPASS="/usr/bin/ssh-askpass-fullscreen"
 export SSH_ENV="$HOME/.ssh/environment"
@@ -27,9 +26,20 @@ export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export VISUAL="vim"
-export PATH="/usr/lib/ccache/bin${PATH:+:}${PATH}"
-export CCACHE_DIR="/tmp/ccache"
 
+# Sway
+export WLR_NO_HARDWARE_CURSORS=1
+#export WLR_RENDERER=vulkan
+export XDG_SESSION_TYPE=wayland
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_USE_XINPUT2=1
+export GBM_BACKEND=nvidia-drm
+export __GL_GSYNC_ALLOWED=0
+export __GL_VRR_ALLOWED=0
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export XWAYLAND_NO_GLAMOR=1
 
 # Ccache
 export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
@@ -129,3 +139,8 @@ keychain ~/.ssh/id_rsa
 
 # Start Fancy Git Prompt
 . ~/.fancy-git/prompt.sh
+
+# Start Sway
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    dbus-run-session sway --unsupported-gpu
+fi
