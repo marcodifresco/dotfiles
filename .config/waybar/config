@@ -1,2 +1,36 @@
-#
-
+{
+	"name": "MainBar",
+	"height": 48,
+	"spacing": 8,
+	"layer": "top",
+	"output": "DP-1",
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["sway/window"],
+	"modules-righit": ["tray", "wireplumber", "clock"],
+	"clock": {
+		"format": "{:%a, %d. %b  %H:%M}"
+	},
+	"tray": {
+		"icon-size": 32,
+		"spacing": 8
+	},
+	"wireplumber": {
+		"icon-size": 32,
+		"format": "{icon} {volume}%",
+		"tooltip": false,
+		"format-muted": " Muted",
+		"on-click": "~/.config/waybar/scripts/audio_changer.py",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		}
+	}
+}
