@@ -255,9 +255,8 @@ for_window [title = "Firefox — Sharing Indicator"] kill
 exec /usr/bin/steam -silent
 exec /usr/bin/telegram-desktop
 assign [app_id="telegram"] workspace number 2
-exec /usr/bin/qbittorrent
-exec_always xrandr --output DP-1 --primary
-
+#exec /usr/bin/qbittorrent
+#exec /opt/bin/dropbox
 
 
 ### Parsing specific configurations
