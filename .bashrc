@@ -27,19 +27,6 @@ export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export VISUAL="vim"
 
-# Sway
-export WLR_NO_HARDWARE_CURSORS=1
-export WLR_RENDERER=vulkan
-export XDG_SESSION_TYPE=wayland
-export QT_QPA_PLATFORM=wayland
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_USE_XINPUT2=1
-export GBM_BACKEND=nvidia-drm
-export __GL_GSYNC_ALLOWED=0
-export __GL_VRR_ALLOWED=0
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export XWAYLAND_NO_GLAMOR=1
 
 # Ccache
 export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
@@ -142,5 +129,17 @@ keychain ~/.ssh/id_rsa
 
 # Start Sway
 #if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-#    dbus-run-session sway --unsupported-gpu
+#	export WLR_NO_HARDWARE_CURSORS=1
+#	export WLR_RENDERER=vulkan
+#	export XDG_SESSION_TYPE=wayland
+#	export QT_QPA_PLATFORM=wayland
+#	export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+#	export MOZ_ENABLE_WAYLAND=1
+#	export MOZ_USE_XINPUT2=1
+#	export GBM_BACKEND=nvidia-drm
+#	export __GL_GSYNC_ALLOWED=0
+#	export __GL_VRR_ALLOWED=0
+#	export __GLX_VENDOR_LIBRARY_NAME=nvidia
+#	export XWAYLAND_NO_GLAMOR=1
+#	dbus-run-session sway --unsupported-gpu
 #fi
