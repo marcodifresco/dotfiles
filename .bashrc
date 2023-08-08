@@ -26,7 +26,7 @@ export TERM="xterm-256color"
 export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export VISUAL="vim"
-
+export GDK_SCALE=1.5
 
 # Ccache
 export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
@@ -141,5 +141,5 @@ keychain ~/.ssh/id_rsa
 #	export __GL_VRR_ALLOWED=0
 #	export __GLX_VENDOR_LIBRARY_NAME=nvidia
 #	export XWAYLAND_NO_GLAMOR=1
-#	dbus-run-session sway --unsupported-gpu
+#	sway -d --unsupported-gpu
 #fi
