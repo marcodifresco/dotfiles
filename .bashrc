@@ -22,7 +22,7 @@ export EDITOR=vim
 export CCACHE_DIR="~/.cache/ccache"
 export SUDO_ASKPASS="/usr/bin/ssh-askpass-fullscreen"
 export SSH_ENV="$HOME/.ssh/environment"
-export TERM="xterm-256color"
+export TERM="alacritty"
 export HISTCONTROL=ignoredups:erasedup
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export VISUAL="vim"
@@ -83,6 +83,13 @@ alias du='du -ch'
 
 # Use tmux instead of screen
 alias screen='tmux'
+
+# Git alias for the public config repo
+alias gitcfg="/usr/bin/git --git-dir=/archive/GitBare/linux-user-configuration.git/"
+
+# Git alias for the personal config repo
+alias gitpcfg="/usr/bin/git --git-dir=/archive/GitBare/personal-config-files.git/ --work-tree=/ push"
+
 
 ## OTHER SETTINGS ##
 # Sudo bash completion
