@@ -258,6 +258,14 @@ assign [app_id="telegram"] workspace number 2
 #exec /usr/bin/qbittorrent
 #exec /opt/bin/dropbox
 
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Auth with polkit-gnome:
+exec /usr/libexec/polkit-gnome-authentication-agent-1
+
 
 ### Parsing specific configurations
 include /etc/sway/config.d/*
