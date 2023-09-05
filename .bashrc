@@ -102,3 +102,5 @@ keychain ~/.ssh/id_rsa
 #	export XWAYLAND_NO_GLAMOR=1
 #	sway -d --unsupported-gpu
 #fi
+
+. ~/.fancy-git/prompt.sh
