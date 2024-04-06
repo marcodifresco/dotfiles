@@ -29,6 +29,14 @@ export VISUAL="vim"
 export GDK_SCALE=1.5
 export GBM_BACKEND=nvidia-drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export LD_BIND_NOW=1
+export VKD3D_CONFIG=force_host_cached
+export VKD3D_DEBUG=none
+export WINEESYNC=1
+export WINEDEBUG="-all"
+export __GL_THREADED_OPTIMIZATIONS=1
+export __GL_SYNC_TO_VBLANK=0
+export __GL_NextGenCompiler=1
 
 
 # Ccache
@@ -86,21 +94,3 @@ keychain ~/.ssh/id_rsa
 # Start Fancy Git Prompt
 . ~/.fancy-git/prompt.sh
 
-# Start Sway
-#if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-#	export WLR_NO_HARDWARE_CURSORS=1
-#	export WLR_RENDERER=vulkan
-#	export XDG_SESSION_TYPE=wayland
-#	export QT_QPA_PLATFORM=wayland
-#	export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-#	export MOZ_ENABLE_WAYLAND=1
-#	export MOZ_USE_XINPUT2=1
-#	export GBM_BACKEND=nvidia-drm
-#	export __GL_GSYNC_ALLOWED=0
-#	export __GL_VRR_ALLOWED=0
-#	export __GLX_VENDOR_LIBRARY_NAME=nvidia
-#	export XWAYLAND_NO_GLAMOR=1
-#	sway -d --unsupported-gpu
-#fi
-
-. ~/.fancy-git/prompt.sh
