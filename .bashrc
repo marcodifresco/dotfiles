@@ -37,7 +37,9 @@ export WINEDEBUG="-all"
 export __GL_THREADED_OPTIMIZATIONS=1
 export __GL_SYNC_TO_VBLANK=0
 export __GL_NextGenCompiler=1
-
+export LANG=en_US.utf8
+export LANGUAGE=en_US.utf8
+export LC_ALL=en_US.utf8
 
 # Ccache
 export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
@@ -65,28 +67,13 @@ export HISTTIMEFORMAT="[%F %T] "
 
 
 ## AUTO EXECUTION #
-# Start the ssh-agent
-function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
-    echo succeeded
-    chmod 600 ${SSH_ENV}
-    . ${SSH_ENV} > /dev/null
-    /usr/bin/ssh-add
-}
-if [ -f "${SSH_ENV}" ]; then
-     . ${SSH_ENV} > /dev/null
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-        start_agent;
-    }
-else
-    start_agent;
+# Use GPG-agent for SSH authentication
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
-
-# Start keychain
-keychain ~/.ssh/id_rsa
-. ~/.keychain/$HOSTNAME-sh
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Start pfetch
 /usr/bin/pfetch
