@@ -39,7 +39,8 @@ export __GL_SYNC_TO_VBLANK=0
 export __GL_NextGenCompiler=1
 export LANG=en_US.utf8
 export LANGUAGE=en_US.utf8
-export LC_ALL=en_US.utf8
+export LC_ALL=C
+export PROMPT_COMMAND=(genfun_set_win_title)
 
 # Ccache
 export PATH="/usr/lib/ccache/bin${PATH:+:}$PATH"
@@ -80,4 +81,14 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Start Fancy Git Prompt
 . ~/.fancy-git/prompt.sh
+
+
+# Wayland
+export gbm_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export ENABLE_VKBASALT=1
+export LIBVA_DRIVER_NAME=nvidia
+export QT_QPA_PLATFORM="wayland-egl"
+export ENABLE_HDR_WSI=1
+export DXVK_HDR=1
 
