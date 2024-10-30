@@ -17,7 +17,7 @@ fi
 
 ## SHELL VARIABLES ##
 export PATH=/usr/local/bin:/archive/scripts/:$PATH
-#export DISPLAY=':0'
+#<C-F4>export DISPLAY=':0'
 export EDITOR=vim
 export CCACHE_DIR="~/.cache/ccache"
 export SUDO_ASKPASS="/usr/bin/ssh-askpass-fullscreen"
