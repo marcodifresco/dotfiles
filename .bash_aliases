@@ -47,3 +47,7 @@ alias du='du -ch'
 # Use tmux instead of screen
 alias screen='tmux'
 
+# Neovim
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
