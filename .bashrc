@@ -41,6 +41,7 @@ export VKD3D_CONFIG=force_host_cached
 export VKD3D_DEBUG=none
 export WINEDEBUG="-all"
 export WINEESYNC=1
+export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/marco/.local/share/flatpak/exports/share:${XDG_DATA_DIRS}"
 
 # LANGUAGE
 export LANG=en_US.utf8

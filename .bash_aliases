@@ -1,6 +1,5 @@
 # Alias for git config backup system
-alias bakconfig='/usr/bin/git --git-dir=/archive/GitBare/dotfiles.git/ --work-tree=/home/marco/'
-alias bakpconfig='/usr/bin/git --git-dir=/archive/GitBare/personal-config-files.git/ --work-tree=/'
+alias dotfiles='/usr/bin/git --git-dir=/archive/GitBare/dotfiles.git/ --work-tree=/home/marco/'
 
 # Fix "Unable to set up transient service directory: XDG_RUNTIME_DIR "/run/user/1000" is owned by uid 1000, not our uid 0"
 alias su='/bin/su -'
