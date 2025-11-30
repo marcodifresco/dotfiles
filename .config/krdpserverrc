@@ -1,5 +1,0 @@
-[General]
-Autostart=true
-Certificate=/home/marco/.local/share/krdpserver/krdp.crt
-CertificateKey=/home/marco/.local/share/krdpserver/krdp.key
-Users=marco
