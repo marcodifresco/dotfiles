@@ -92,3 +92,5 @@ dircolors -p >~/.dircolors
 # Start pfetch
 /usr/bin/pfetch
 
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
