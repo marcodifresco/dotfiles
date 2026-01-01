@@ -1,0 +1,13 @@
+[Unit]
+Description=Run rclone bisync for Documents every 5 minutes
+
+[Timer]
+# Run 1 minute after boot/login
+OnBootSec=1min
+# Run every 5 minutes thereafter
+OnUnitInactiveSec=5min
+Unit=gdrive-bisync.service
+
+[Install]
+WantedBy=timers.target
+
