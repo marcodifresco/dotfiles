@@ -1,3 +1,4 @@
+alsa_soundcard default:CARD=Pro
 cli_add_playlist_name Default
 close_send_to_tray 1
 deadbeef_version 1.10.0
@@ -53,7 +54,7 @@ logwindow.geometry.h 200
 logwindow.geometry.w 400
 logwindow.geometry.x -2560
 logwindow.geometry.y 0
-mainwin.geometry.h 662
+mainwin.geometry.h 624
 mainwin.geometry.w 1272
 mainwin.geometry.x 0
 mainwin.geometry.y 0

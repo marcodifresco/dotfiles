@@ -1,15 +1,17 @@
 [Unit]
 Description=rclone bisync for Google Drive Documents
-# This service should not run if there is no network connection
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/rclone bisync ~/Documents gdrive: \
+ExecStart=/usr/bin/rclone bisync %h/Documents gdrive: \
     --exclude ".git/**" \
     --exclude ".stfolder/**" \
-    --resync \
+    --exclude "EVE/logs/Gamelogs/**" \
+    --drive-import-formats docx,xlsx,pptx,odt,ods \
+    --drive-export-formats docx,xlsx,pptx,odt,ods \
+    --track-renames \
     --verbose \
     --log-file=%h/.local/state/rclone-bisync.log
 
