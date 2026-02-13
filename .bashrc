@@ -73,7 +73,6 @@ export HISTFILESIZE=
 export HISTSIZE=
 export HISTTIMEFORMAT="[%F %T] "
 
-## AUTO EXECUTION #
 # Use GPG-agent for SSH authentication
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
@@ -92,6 +91,7 @@ dircolors -p >~/.dircolors
 # Start pfetch
 /usr/bin/pfetch
 
+# Volta support
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
