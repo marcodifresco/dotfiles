@@ -96,4 +96,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Set bash prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+source ~/.git-prompt.sh
 source ~/.bash_prompt
