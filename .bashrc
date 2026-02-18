@@ -99,3 +99,8 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export GIT_PS1_SHOWDIRTYSTATE=1
 source ~/.git-prompt.sh
 source ~/.bash_prompt
+
+# Enter tmux session
+if [ -z "$TMUX" ]; then
+  /usr/bin/tmux attach -t main || /usr/bin/tmux new-session -s main
+fi
