@@ -62,6 +62,9 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 # Set console colors
 dircolors -p >~/.dircolors
 
+# Python virtual environments
+source ~/.venv/bin/activate
+
 # Start pfetch
 /usr/bin/pfetch
 
