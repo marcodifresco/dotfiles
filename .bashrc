@@ -9,9 +9,10 @@ fi
 ## SHELL VARIABLES ##
 export CCACHE_DIR="~/.cache/ccache"
 export EDITOR=vim
+export GDK_BACKEND=x11
 export LD_BIND_NOW=1
 export OLLAMA_HOST=192.168.0.22:11434
-export PATH=/usr/local/bin:/archive/scripts/:$PATH
+export PATH=/usr/local/bin:/archive/scripts/:/usr/lib64/qt6/bin:$PATH
 export PROMPT_COMMAND=(genfun_set_win_title)
 export QT_QPA_PLATFORM="wayland"
 export SSH_ENV="$HOME/.ssh/environment"
@@ -37,7 +38,7 @@ fi
 
 ## OTHER SETTINGS ##
 # Set the personal Gemini API key
-source ~/.gemini_api_key
+source ~/.ai_api_key
 
 # Sudo bash completion
 complete -cf sudo
