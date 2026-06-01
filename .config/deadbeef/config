@@ -1,15 +1,40 @@
 alsa_soundcard default:CARD=Pro
+artwork.cache.expiration_time 0.000000
+artwork.cache.simplified 0
+artwork.cache_reset_time 1777345719
+artwork.enable_embedded 1
+artwork.enable_lastfm 1
+artwork.enable_localfolder 1
+artwork.enable_wos 0
+artwork.filemask front.png;front.jpg;front.jpeg;folder.png;folder.jpg;folder.jpeg;cover.png;cover.jpg;cover.jpeg;f.png;f.jpg;f.jpeg;*front*.png;*front*.jpg;*front*.jpeg;*cover*.png;*cover*.jpg;*cover.jpeg;*folder*.png;*folder*.jpg;*folder*.jpeg;*.png;*.jpg;*.jpeg
+artwork.folders art;scans;covers;artwork;artworks
+artwork.image_size 256.000000
+artwork.missing_artwork 1
+artwork.nocover_path 
+artwork.save_to_music_folders 0
+artwork.save_to_music_folders_relative_path cover.jpg
+cdda.drive_speed 2
+cdda.enable_nrg 1
+cdda.freedb.enable 1
+cdda.freedb.host gnudb.gnudb.org
+cdda.freedb.port 8880
+cdda.paranoia 1
+cdda.prefer_cdtext 1
+cdda.protocol 1
 cli_add_playlist_name Default
 close_send_to_tray 0
-deadbeef_version 1.10.0
+deadbeef_version 1.10.2
 filechooser.lastdir file://~/Music
-gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"316","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"448","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"87","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.columns.playlist [{"title":"♫","id":"1","format":"%playstatus%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"60","align":"2","color_override":"0","color":"#ff000000"},{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"316","align":"0","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"448","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"87","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.columns.search [{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Track No","id":"-1","format":"%tracknumber%","sort_format":"","size":"50","align":"1","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"150","align":"0","color_override":"0","color":"#ff000000"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"50","align":"0","color_override":"0","color":"#ff000000"}]
 gtkui.eq.visible 0
 gtkui.hide_tray_icon 0
-gtkui.layout.1.9.0 {"type":"vbox","legacy_params":" expand=\"0 1\" fill=\"1 1\" homogeneous=0","children":[{"type":"hbox","legacy_params":" expand=\"0 1 0\" fill=\"1 1 1\" homogeneous=0","children":[{"type":"playtb"},{"type":"seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]},{"type":"tabbed_playlist","legacy_params":" hideheaders=0 width=1272"}]}
+gtkui.layout.1.9.0 {"type":"vbox","legacy_params":" expand=\"0 1\" fill=\"1 1\" homogeneous=0","children":[{"type":"hbox","legacy_params":" expand=\"0 1 0\" fill=\"1 1 1\" homogeneous=0","children":[{"type":"playtb"},{"type":"seekbar"},{"type":"volumebar","settings":{"scale":"db"}}]},{"type":"tabbed_playlist","legacy_params":" hideheaders=0 width=3828"}]}
 gtkui.log.autoopen 0
 gtkui.playlist.group_by_tf 
+gtkui.pltbrowser.highlight_curr_plt 1
+gtkui.pltbrowser.mmb_delete_playlist 0
+gtkui.pltbrowser.play_on_double_click 1
 gtkui.search.group_by_tf 
 gtkui.start_hidden 0
 gtkui.statusbar.visible 1
@@ -56,36 +81,40 @@ logwindow.geometry.h 200
 logwindow.geometry.w 400
 logwindow.geometry.x -2560
 logwindow.geometry.y 0
-mainwin.geometry.h 1360
-mainwin.geometry.w 1272
-mainwin.geometry.x 0
-mainwin.geometry.y 0
+mainwin.geometry.h 1020
+mainwin.geometry.maximized 0
+mainwin.geometry.w 1908
+mainwin.geometry.x 1920
+mainwin.geometry.y 1080
 medialib.deadbeef.enabled 1
 medialib.deadbeef.paths ["/home/marco/Music"]
 network.proxy.port 8080
 output_plugin pipewire
+pipewire.properties 
+pipewire.remotename 
+pipewire.volumecontrol 1
 playback.loop 1
 playback.volume.normalized 1.0000000
 playlist.current 0
-playlist.cursor.0 -1
+playlist.cursor.0 18
 playlist.cursor.1 0
-playlist.scroll.0 0
+playlist.scroll.0 -18
 playlist.scroll.1 0
 playlist.scroll.cursorfollowplayback 1
-playlist.stop_after_current 1
+playlist.stop_after_current 0
 playlist.tab.00000 Default
 prefwin.geometry.h 588
 prefwin.geometry.w 770
 prefwin.geometry.x -2560
 prefwin.geometry.y 0
 replaygain.source_mode 1
-resume.paused 0
-resume.playlist -1
-resume.position -1.000000
-resume.track -1
+resume.paused 1
+resume.playlist 0
+resume.position 5.6590767
+resume.track 18
 searchwin.geometry.h 150
 searchwin.geometry.w 450
-searchwin.geometry.x -2560
+searchwin.geometry.x 0
 searchwin.geometry.y 0
 streamer.16_to_24 1
 streamer.bit_override 5
